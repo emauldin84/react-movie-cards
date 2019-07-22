@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 import Header from '../components/Header'
+import MovieList from '../components/MovieList'
 
 class Movies extends Component {
     state = {
@@ -14,7 +15,6 @@ class Movies extends Component {
                 this.setState({
                     movies: res.data.Search
                 })
-                console.log(this.state.movies)
             })
             .catch (err => {
                 console.log(err)
@@ -24,7 +24,7 @@ class Movies extends Component {
         return (
             <div>
                 <Header/>
-                
+                <MovieList movies={this.state.movies}/>
             </div>
         )
     }
