@@ -22,7 +22,7 @@ class Movies extends Component {
     }
     render() {
         return (
-            <div>
+            <div style={{backgroundColor:'rgb(72, 72, 72)'}}>
                 <Header/>
                 <MovieList movies={this.state.movies}/>
             </div>
