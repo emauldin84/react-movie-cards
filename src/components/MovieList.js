@@ -6,7 +6,7 @@ const MovieList = (props) => {
 
     return(
         <div style={{marginTop: '50px'}}>
-            <MovieCard movies={props.movies}/> 
+            <MovieCard movies={props.movies} clicked={props.clicked}/> 
         </div>
     )
     
