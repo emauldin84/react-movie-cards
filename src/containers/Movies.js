@@ -54,10 +54,11 @@ class Movies extends Component {
                 <Modal 
                     show={this.state.showModal} 
                     clicked={this.backdropClickedHandler}>
-                        <img className="img-fluid float-left" src={this.state.moviePoster} alt={`${this.state.movieTitle} movie poster`}/>
+                        <img className="img-fluid float-left modalPoster" src={this.state.moviePoster} alt={`${this.state.movieTitle} movie poster`}/>
                         <div>
                             <h3>{this.state.movieTitle}</h3>
-                            <h4>{this.state.movieYear}</h4>
+                            <h5>{this.state.movieYear}</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
                         
 
