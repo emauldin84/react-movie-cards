@@ -39,12 +39,17 @@ class Movies extends Component {
 
     backdropClickedHandler = () => {
         this.setState({
-            showModal: !this.state.showModal
+            showModal: !this.state.showModal,
+            movieId: null,
+            movieTitle: null,
+            moviePoster: null,
+            movieYear: null,
         })
     }
 
 
     render() {
+
         return (
             <div style={{backgroundColor:'rgb(72, 72, 72)'}}>
                 <Header/>
