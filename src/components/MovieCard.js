@@ -1,9 +1,10 @@
 import React from 'react'
 
 const MovieCard = (props) => {
+    console.log('movie card', props)
 
     let movieCards = props.movies ? props.movies.map(movie => {
-        return (<div onClick={props.clicked} key={movie.imdbID} className="card" style={{width: "12rem", margin:'5px'}}>
+        return (<div onClick={() => props.clicked(movie.imdbID, movie.Poster, movie.Title, movie.Year)} key={movie.imdbID} className="card" style={{width: "12rem", margin:'5px'}}>
             <img className="card-img-top" src={movie.Poster} alt={`${movie.Title} movie poster`}/>
             <div className="card-body">
                 <h5 className="card-title">{movie.Title}</h5>

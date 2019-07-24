@@ -9,6 +9,10 @@ class Movies extends Component {
     state = {
         movies: null,
         showModal: false,
+        movieId: null,
+        movieTitle: null,
+        moviePoster: null,
+        movieYear: null,
     }
 
     componentDidMount() {
@@ -23,9 +27,13 @@ class Movies extends Component {
             })
     }
 
-    cardClickedHandler = () => {
+    cardClickedHandler = (id, poster, title, year) => {
         this.setState({
-            showModal: !this.state.showModal
+            showModal: !this.state.showModal,
+            movieId: id,
+            movieTitle: title,
+            moviePoster: poster,
+            movieYear: year,
         })
     }
 
@@ -40,8 +48,20 @@ class Movies extends Component {
         return (
             <div style={{backgroundColor:'rgb(72, 72, 72)'}}>
                 <Header/>
-                <MovieList movies={this.state.movies} clicked={this.cardClickedHandler}/>
-                <Modal show={this.state.showModal} clicked={this.backdropClickedHandler}/>
+                <MovieList 
+                    movies={this.state.movies} 
+                    clicked={this.cardClickedHandler}/>
+                <Modal 
+                    show={this.state.showModal} 
+                    clicked={this.backdropClickedHandler}>
+                        <img className="img-fluid float-left" src={this.state.moviePoster} alt={`${this.state.movieTitle} movie poster`}/>
+                        <div>
+                            <h3>{this.state.movieTitle}</h3>
+                            <h4>{this.state.movieYear}</h4>
+                        </div>
+                        
+
+                </Modal>
             </div>
         )
     }
