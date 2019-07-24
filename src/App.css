@@ -1,7 +1,11 @@
 .App {
   text-align: center;
+  height: 100%;
 }
+html, body, #root {
+  height: 100%;
 
+}
 
 .Backdrop {
   width: 100%;
@@ -17,7 +21,7 @@
   position: fixed;
   color: white;
   z-index: 500;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, .7);
   width: 70%;
   border: 1px solid #ccc;
   box-shadow: 1px 1px 1px black;
@@ -35,7 +39,7 @@
       width: 500px;
       left: calc(50% - 250px);
   }
- 
+
 }
 
 .modalPoster {
@@ -115,3 +119,10 @@
   }
 }
 
+.input-group {
+  width: 300px;
+  margin: 0 auto;
+}
+.form-control {
+  margin-left: 30%;
+}

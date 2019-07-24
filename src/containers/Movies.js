@@ -73,7 +73,7 @@ class Movies extends Component {
     render() {
 
         return (
-            <div style={{backgroundColor:'rgb(72, 72, 72)'}}>
+            <div style={{backgroundColor:'rgb(22,22,22)', height: '100%'}}>
                 <Header/>
                 <Search value={this.state.searchValue} submitHandler={(event) => this.submitHandler(event)} change={(event) => this.onChangeHandler(event)}/>
                 <MovieList 
